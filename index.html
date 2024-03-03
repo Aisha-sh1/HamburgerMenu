@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bakery-Fırın</title>
+
+    <!--================================== Site Simgesi -- Favicon ======================================-->
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!--================================== Remix Simgesi -- Remixicon ======================================-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css"
+    />
+
+    <!--================================== CSS ======================================-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--================================== HEADER ======================================-->
+
+    <!--! MENU KISMI -anasayfa - yeni - hakkında - favoriler - navigasyon BAŞI-->
+
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Fırın</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Anasayfa</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#new" class="nav__link">Yeniler</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#about" class="nav__link">Hakkımızda</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#favorite" class="nav__link">Favoriler</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#visit" class="nav__link">Konum</a>
+            </li>
+          </ul>
+          <!--! MENU KISMI -anasayfa - yeni - hakkında - favoriler - navigasyon SON-->
+
+          <!--! Close button -- kapat düğmesi-->
+          <div class="nav__close" id="nav-close">
+            <!-- burdaki iconu remixicon sitesinden "close" iconu arayarak linkini kopyaladım. -->
+            <i class="ri-close-line"></i>
+          </div>
+
+          
+        </div>
+
+        <!--! Toggle Button -- Geçiş Düğmesi -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line"></i>
+          <!-- burdaki iconu remixicon sitesinden "menu" iconu arayarak linkini kopyaladım. -->
+        </div>
+      </nav>
+    </header>
+
+     <!--================================== javaScript ======================================-->
+     <script src="main.js"></script>
+</body>
+</html>

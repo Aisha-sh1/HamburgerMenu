@@ -1,0 +1,158 @@
+/*--================================== Google Fonts======================================-*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 10;
+  margin: 1px;
+}
+body {
+  background: url("img/background1.jpg");
+  background-color: black;
+  color: white;
+  background-size:cover;
+  background-repeat: no-repeat;
+
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    
+}
+
+/*--===================== HEADER & NAV ======================-*/
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0; /* t0 yazıp enter basarsan direk kod bu hale gelir bu da zaman tasarrufunu sağlar*/
+  left: 0; /* aynı şey burda da geçerli. l0 yaparak çalış.*/
+  background-color: transparent;
+  z-index: 100;
+}
+
+/* menuler ortaya alındı. menu çubuğu en sağa alındı. */
+.nav {
+  position: relative;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  color: aqua;
+  font-size: 1.75rem;
+  font-family: "Dancing Script", cursive;
+  transition: color 0.4s;
+}
+
+.nav__logo:hover {
+  color: yellow;
+}
+
+.nav__toggle,
+.nav__close {
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+
+/*- Navigation for mobile devices -- Mobil cihazlar için navigasyon-*/
+
+@media screen and (max-width: 1150px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: hsla(0, 0%, 6%, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); /*for safari*/
+    width: 80%;
+    height: 100%;
+    padding: 6rem 3rem 0;
+    transition: right 0.4s;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.nav__link {
+  color: white;
+  font-weight: bold;
+  transition: color 0.4s;
+  font-size: 1.5rem;
+}
+
+.nav__link:hover {
+  color: rgb(245, 187, 13);
+  font-size: 1.25rem;   
+}
+
+.nav__close {
+  position: absolute;
+}
+
+.nav__close {
+  top: 1rem;
+  right: 1.5rem;
+}
+
+/* SHOW MENU */
+.show-menu {
+  /* bunu yazmadan hamburger menuya basınca çalışmadı. Merak ettim, hocaya sor neden bu kodla çalıştı, ne alaka... */
+  right: 0;
+}
+
+/*----ADD BLUR HEADER-----*/
+.blur-header::after {
+  content: "";
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(0, 0%, 6%, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* For large devices */
+@media screen and (min-width: 1150px) {
+  .container {
+    margin-inline: auto;
+  }
+
+  .nav {
+    height: 5rem;
+  }
+
+  .nav__toggle,
+  .nav__close {
+    display: none;
+  }
+
+  .nav__menu {
+    width: initial;
+  }
+  .nav__list {
+    flex-direction: row;
+    column-gap: 4rem;
+    
+  }
+}
